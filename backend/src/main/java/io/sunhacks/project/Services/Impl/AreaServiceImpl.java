@@ -31,8 +31,8 @@ public class AreaServiceImpl implements AreaService {
   }
 
   @Override
-  public Area getItem(Area input) throws Exception {
-    Area output = null;
+  public List<Area> getItem(Area input) throws Exception {
+    List<Area> output = null;
     try {
         output = areaMapper.selectItem(input);
         if (output == null) {
@@ -45,8 +45,8 @@ public class AreaServiceImpl implements AreaService {
   }
 
    @Override
-   public Area editItem(Area input) throws Exception {
-     Area output = null;
+   public List<Area> editItem(Area input) throws Exception {
+     List<Area> output = null;
      int rows = 0;
      try {
          rows = areaMapper.updateItem(input);

@@ -24,7 +24,7 @@ public class AreaController {
   //area -> all zipcodes
   //city -> 4 zipcodes
   //zipcode -> 1 zipcode
-  @GetMapping("/areas")
+  @GetMapping("/areas/")
   public Map<String, Object> getList() {
     List<Area> output = null;
     try {
@@ -43,7 +43,7 @@ public class AreaController {
   ) {
     Area input = new Area();
     input.setZipcode(zipcode);
-    Area output = null;
+    List<Area> output = null;
     try {
       output = areaService.getItem(input);
     } catch (Exception e) {

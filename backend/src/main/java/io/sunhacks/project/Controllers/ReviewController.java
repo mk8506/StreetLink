@@ -95,7 +95,7 @@ import lombok.extern.slf4j.Slf4j;
       newInput.setPublicEdu(publicEdu);
       newInput.setAffordability(affordability);
       newInput.setTraits(traits); //fix: traits not change -> add new
-      Area areaOutput = null;
+      List<Area> areaOutput = null;
       try {
         output = reviewService.addItem(input);
         areaOutput = areaService.editItem(newInput);

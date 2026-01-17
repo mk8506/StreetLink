@@ -28,7 +28,7 @@ public interface AreaMapper {
           @Result(column = "traits", property = "traits",
                   typeHandler = StringArrayConverter.class)
   })
-  public Area selectItem(Area input);
+  public List<Area> selectItem(Area input);
 
   @Update("<script>" +
             "UPDATE area_ratings SET safety = #{safety}, publicEdu = #{publicEdu}, affordability = #{affordability}" +

@@ -1,4 +1,4 @@
-export type Area = {
+export type AreaType = {
   zipcode: number;
   city: string;
   description: string;
@@ -13,14 +13,14 @@ export type ApiDataAll = {
   timestamp: String;
   status: number;
   message: String;
-  areas: Area[];
+  areas: AreaType[];
 };
 
 export type ApiData = {
   timestamp: String;
   status: number;
   message: String;
-  areas: Area;
+  areas: AreaType;
 };
 
 export async function getAll(input: string): Promise<ApiDataAll> {

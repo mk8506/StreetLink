@@ -1,787 +1,117 @@
-[INFO ] 25-09-27 21:42:30 [ProjectApplication:53] - Starting ProjectApplication using Java 21.0.4 with PID 3700 (D:\My_Programming\SunhacksFull\backend\build\classes\java\main started by SienMinj in D:\My_Programming\SunhacksFull\backend)
-[DEBUG] 25-09-27 21:42:30 [ProjectApplication:54] - Running with Spring Boot v3.5.6, Spring v6.2.11
-[INFO ] 25-09-27 21:42:30 [ProjectApplication:652] - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 25-09-27 21:42:36 [sqlonly:228] - SELECT @@character_set_database, @@sql_mode
-
-[ERROR] 25-09-27 21:42:37 [MapperFactoryBean:78] - Error while adding the mapper 'interface io.sunhacks.project.Mappers.AreaMapper' to configuration.
-org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:262)
-	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:117)
-	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:52)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSourceFromStrings(MapperAnnotationBuilder.java:592)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSource(MapperAnnotationBuilder.java:579)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:287)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:286)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:131)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:936)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:76)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1760)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at io.sunhacks.project.ProjectApplication.main(ProjectApplication.java:10)
-Caused by: org.xml.sax.SAXParseException: XML document structures must start and end within the same entity.
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.endEntity(XMLDocumentFragmentScannerImpl.java:943)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.endEntity(XMLDocumentScannerImpl.java:562)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.endEntity(XMLEntityManager.java:1504)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.load(XMLEntityScanner.java:1720)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.skipSpaces(XMLEntityScanner.java:1433)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1699)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
-	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260)
-	... 59 common frames omitted
-[ERROR] 25-09-27 21:42:37 [MapperFactoryBean:78] - Error while adding the mapper 'interface io.sunhacks.project.Mappers.AreaMapper' to configuration.
-org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:262)
-	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:117)
-	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:52)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSourceFromStrings(MapperAnnotationBuilder.java:592)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSource(MapperAnnotationBuilder.java:579)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:287)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:286)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:131)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:936)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:76)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1760)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at io.sunhacks.project.ProjectApplication.main(ProjectApplication.java:10)
-Caused by: org.xml.sax.SAXParseException: XML document structures must start and end within the same entity.
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.endEntity(XMLDocumentFragmentScannerImpl.java:943)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.endEntity(XMLDocumentScannerImpl.java:562)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.endEntity(XMLEntityManager.java:1504)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.load(XMLEntityScanner.java:1720)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.skipSpaces(XMLEntityScanner.java:1433)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1699)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
-	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260)
-	... 59 common frames omitted
-[WARN ] 25-09-27 21:42:37 [AnnotationConfigServletWebServerApplicationContext:635] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'areaController': Unsatisfied dependency expressed through field 'areaService': Error creating bean with name 'areaServiceImpl': Unsatisfied dependency expressed through field 'areaMapper': Error creating bean with name 'areaMapper' defined in file [D:\My_Programming\SunhacksFull\backend\build\classes\java\main\io\sunhacks\project\Mappers\AreaMapper.class]: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-[ERROR] 25-09-27 21:42:37 [SpringApplication:857] - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'areaController': Unsatisfied dependency expressed through field 'areaService': Error creating bean with name 'areaServiceImpl': Unsatisfied dependency expressed through field 'areaMapper': Error creating bean with name 'areaMapper' defined in file [D:\My_Programming\SunhacksFull\backend\build\classes\java\main\io\sunhacks\project\Mappers\AreaMapper.class]: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at io.sunhacks.project.ProjectApplication.main(ProjectApplication.java:10)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'areaServiceImpl': Unsatisfied dependency expressed through field 'areaMapper': Error creating bean with name 'areaMapper' defined in file [D:\My_Programming\SunhacksFull\backend\build\classes\java\main\io\sunhacks\project\Mappers\AreaMapper.class]: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1760)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	... 22 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'areaMapper' defined in file [D:\My_Programming\SunhacksFull\backend\build\classes\java\main\io\sunhacks\project\Mappers\AreaMapper.class]: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	... 36 common frames omitted
-Caused by: java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:79)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	... 45 common frames omitted
-Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:262)
-	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:117)
-	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:52)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSourceFromStrings(MapperAnnotationBuilder.java:592)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSource(MapperAnnotationBuilder.java:579)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:287)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:286)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:131)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:936)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:76)
-	... 48 common frames omitted
-Caused by: org.xml.sax.SAXParseException: XML document structures must start and end within the same entity.
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.endEntity(XMLDocumentFragmentScannerImpl.java:943)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.endEntity(XMLDocumentScannerImpl.java:562)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.endEntity(XMLEntityManager.java:1504)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.load(XMLEntityScanner.java:1720)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.skipSpaces(XMLEntityScanner.java:1433)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1699)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
-	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260)
-	... 59 common frames omitted
-[INFO ] 25-09-27 22:12:25 [ProjectApplication:53] - Starting ProjectApplication using Java 21.0.4 with PID 9240 (D:\My_Programming\SunhacksFull\backend\build\classes\java\main started by SienMinj in D:\My_Programming\SunhacksFull\backend)
-[DEBUG] 25-09-27 22:12:25 [ProjectApplication:54] - Running with Spring Boot v3.5.6, Spring v6.2.11
-[INFO ] 25-09-27 22:12:25 [ProjectApplication:652] - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 25-09-27 22:12:32 [sqlonly:228] - SELECT @@character_set_database, @@sql_mode
-
-[ERROR] 25-09-27 22:12:34 [MapperFactoryBean:78] - Error while adding the mapper 'interface io.sunhacks.project.Mappers.AreaMapper' to configuration.
-org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:262)
-	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:117)
-	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:52)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSourceFromStrings(MapperAnnotationBuilder.java:592)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSource(MapperAnnotationBuilder.java:579)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:287)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:286)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:131)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:936)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:76)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1760)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at io.sunhacks.project.ProjectApplication.main(ProjectApplication.java:10)
-Caused by: org.xml.sax.SAXParseException: XML document structures must start and end within the same entity.
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.endEntity(XMLDocumentFragmentScannerImpl.java:943)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.endEntity(XMLDocumentScannerImpl.java:562)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.endEntity(XMLEntityManager.java:1504)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.load(XMLEntityScanner.java:1720)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.skipSpaces(XMLEntityScanner.java:1433)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1699)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
-	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260)
-	... 59 common frames omitted
-[ERROR] 25-09-27 22:12:34 [MapperFactoryBean:78] - Error while adding the mapper 'interface io.sunhacks.project.Mappers.AreaMapper' to configuration.
-org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:262)
-	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:117)
-	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:52)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSourceFromStrings(MapperAnnotationBuilder.java:592)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSource(MapperAnnotationBuilder.java:579)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:287)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:286)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:131)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:936)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:76)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1760)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at io.sunhacks.project.ProjectApplication.main(ProjectApplication.java:10)
-Caused by: org.xml.sax.SAXParseException: XML document structures must start and end within the same entity.
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.endEntity(XMLDocumentFragmentScannerImpl.java:943)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.endEntity(XMLDocumentScannerImpl.java:562)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.endEntity(XMLEntityManager.java:1504)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.load(XMLEntityScanner.java:1720)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.skipSpaces(XMLEntityScanner.java:1433)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1699)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
-	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260)
-	... 59 common frames omitted
-[WARN ] 25-09-27 22:12:34 [AnnotationConfigServletWebServerApplicationContext:635] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'areaController': Unsatisfied dependency expressed through field 'areaService': Error creating bean with name 'areaServiceImpl': Unsatisfied dependency expressed through field 'areaMapper': Error creating bean with name 'areaMapper' defined in file [D:\My_Programming\SunhacksFull\backend\build\classes\java\main\io\sunhacks\project\Mappers\AreaMapper.class]: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-[ERROR] 25-09-27 22:12:34 [SpringApplication:857] - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'areaController': Unsatisfied dependency expressed through field 'areaService': Error creating bean with name 'areaServiceImpl': Unsatisfied dependency expressed through field 'areaMapper': Error creating bean with name 'areaMapper' defined in file [D:\My_Programming\SunhacksFull\backend\build\classes\java\main\io\sunhacks\project\Mappers\AreaMapper.class]: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at io.sunhacks.project.ProjectApplication.main(ProjectApplication.java:10)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'areaServiceImpl': Unsatisfied dependency expressed through field 'areaMapper': Error creating bean with name 'areaMapper' defined in file [D:\My_Programming\SunhacksFull\backend\build\classes\java\main\io\sunhacks\project\Mappers\AreaMapper.class]: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1760)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	... 22 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'areaMapper' defined in file [D:\My_Programming\SunhacksFull\backend\build\classes\java\main\io\sunhacks\project\Mappers\AreaMapper.class]: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	... 36 common frames omitted
-Caused by: java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:79)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	... 45 common frames omitted
-Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 17; XML document structures must start and end within the same entity.
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:262)
-	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:117)
-	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:52)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSourceFromStrings(MapperAnnotationBuilder.java:592)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSource(MapperAnnotationBuilder.java:579)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:287)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:286)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:131)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:936)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:76)
-	... 48 common frames omitted
-Caused by: org.xml.sax.SAXParseException: XML document structures must start and end within the same entity.
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.endEntity(XMLDocumentFragmentScannerImpl.java:943)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.endEntity(XMLDocumentScannerImpl.java:562)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.endEntity(XMLEntityManager.java:1504)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.load(XMLEntityScanner.java:1720)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.skipSpaces(XMLEntityScanner.java:1433)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1699)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
-	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260)
-	... 59 common frames omitted
-[INFO ] 25-09-27 22:34:50 [ProjectApplication:53] - Starting ProjectApplication using Java 21.0.4 with PID 14828 (D:\My_Programming\SunhacksFull\backend\build\classes\java\main started by SienMinj in D:\My_Programming\SunhacksFull\backend)
-[DEBUG] 25-09-27 22:34:50 [ProjectApplication:54] - Running with Spring Boot v3.5.6, Spring v6.2.11
-[INFO ] 25-09-27 22:34:50 [ProjectApplication:652] - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 25-09-27 22:34:56 [sqlonly:228] - SELECT @@character_set_database, @@sql_mode
-
-[ERROR] 25-09-27 22:34:57 [MapperFactoryBean:78] - Error while adding the mapper 'interface io.sunhacks.project.Mappers.ReviewMapper' to configuration.
-java.lang.IllegalStateException: Type handler was null on parameter mapping for property 'traits'. It was either not specified and/or could not be found for the javaType ([Ljava.lang.String;) : jdbcType (VARCHAR) combination.
-	at org.apache.ibatis.mapping.ParameterMapping$Builder.validate(ParameterMapping.java:117)
-	at org.apache.ibatis.mapping.ParameterMapping$Builder.build(ParameterMapping.java:104)
-	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:146)
-	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:89)
-	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:76)
-	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:51)
-	at org.apache.ibatis.scripting.defaults.RawSqlSource.<init>(RawSqlSource.java:46)
-	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:61)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSourceFromStrings(MapperAnnotationBuilder.java:592)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSource(MapperAnnotationBuilder.java:581)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:287)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:286)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:131)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:936)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:76)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1760)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at io.sunhacks.project.ProjectApplication.main(ProjectApplication.java:10)
-[ERROR] 25-09-27 22:34:57 [MapperFactoryBean:78] - Error while adding the mapper 'interface io.sunhacks.project.Mappers.ReviewMapper' to configuration.
-java.lang.IllegalStateException: Type handler was null on parameter mapping for property 'traits'. It was either not specified and/or could not be found for the javaType ([Ljava.lang.String;) : jdbcType (VARCHAR) combination.
-	at org.apache.ibatis.mapping.ParameterMapping$Builder.validate(ParameterMapping.java:117)
-	at org.apache.ibatis.mapping.ParameterMapping$Builder.build(ParameterMapping.java:104)
-	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:146)
-	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:89)
-	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:76)
-	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:51)
-	at org.apache.ibatis.scripting.defaults.RawSqlSource.<init>(RawSqlSource.java:46)
-	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:61)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSourceFromStrings(MapperAnnotationBuilder.java:592)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSource(MapperAnnotationBuilder.java:581)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:287)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:286)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:131)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:936)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:76)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1760)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at io.sunhacks.project.ProjectApplication.main(ProjectApplication.java:10)
-[WARN ] 25-09-27 22:34:57 [AnnotationConfigServletWebServerApplicationContext:635] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reviewController': Unsatisfied dependency expressed through field 'reviewService': Error creating bean with name 'reviewServiceImpl': Unsatisfied dependency expressed through field 'reviewMapper': Error creating bean with name 'reviewMapper' defined in file [D:\My_Programming\SunhacksFull\backend\build\classes\java\main\io\sunhacks\project\Mappers\ReviewMapper.class]: java.lang.IllegalStateException: Type handler was null on parameter mapping for property 'traits'. It was either not specified and/or could not be found for the javaType ([Ljava.lang.String;) : jdbcType (VARCHAR) combination.
-[ERROR] 25-09-27 22:34:57 [SpringApplication:857] - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reviewController': Unsatisfied dependency expressed through field 'reviewService': Error creating bean with name 'reviewServiceImpl': Unsatisfied dependency expressed through field 'reviewMapper': Error creating bean with name 'reviewMapper' defined in file [D:\My_Programming\SunhacksFull\backend\build\classes\java\main\io\sunhacks\project\Mappers\ReviewMapper.class]: java.lang.IllegalStateException: Type handler was null on parameter mapping for property 'traits'. It was either not specified and/or could not be found for the javaType ([Ljava.lang.String;) : jdbcType (VARCHAR) combination.
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at io.sunhacks.project.ProjectApplication.main(ProjectApplication.java:10)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reviewServiceImpl': Unsatisfied dependency expressed through field 'reviewMapper': Error creating bean with name 'reviewMapper' defined in file [D:\My_Programming\SunhacksFull\backend\build\classes\java\main\io\sunhacks\project\Mappers\ReviewMapper.class]: java.lang.IllegalStateException: Type handler was null on parameter mapping for property 'traits'. It was either not specified and/or could not be found for the javaType ([Ljava.lang.String;) : jdbcType (VARCHAR) combination.
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1760)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	... 22 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'reviewMapper' defined in file [D:\My_Programming\SunhacksFull\backend\build\classes\java\main\io\sunhacks\project\Mappers\ReviewMapper.class]: java.lang.IllegalStateException: Type handler was null on parameter mapping for property 'traits'. It was either not specified and/or could not be found for the javaType ([Ljava.lang.String;) : jdbcType (VARCHAR) combination.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	... 36 common frames omitted
-Caused by: java.lang.IllegalArgumentException: java.lang.IllegalStateException: Type handler was null on parameter mapping for property 'traits'. It was either not specified and/or could not be found for the javaType ([Ljava.lang.String;) : jdbcType (VARCHAR) combination.
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:79)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	... 45 common frames omitted
-Caused by: java.lang.IllegalStateException: Type handler was null on parameter mapping for property 'traits'. It was either not specified and/or could not be found for the javaType ([Ljava.lang.String;) : jdbcType (VARCHAR) combination.
-	at org.apache.ibatis.mapping.ParameterMapping$Builder.validate(ParameterMapping.java:117)
-	at org.apache.ibatis.mapping.ParameterMapping$Builder.build(ParameterMapping.java:104)
-	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:146)
-	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:89)
-	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:76)
-	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:51)
-	at org.apache.ibatis.scripting.defaults.RawSqlSource.<init>(RawSqlSource.java:46)
-	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:61)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSourceFromStrings(MapperAnnotationBuilder.java:592)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSource(MapperAnnotationBuilder.java:581)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:287)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:286)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:131)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:936)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:76)
-	... 48 common frames omitted
-[INFO ] 25-09-27 22:36:30 [ProjectApplication:53] - Starting ProjectApplication using Java 21.0.4 with PID 19804 (D:\My_Programming\SunhacksFull\backend\build\classes\java\main started by SienMinj in D:\My_Programming\SunhacksFull\backend)
-[DEBUG] 25-09-27 22:36:30 [ProjectApplication:54] - Running with Spring Boot v3.5.6, Spring v6.2.11
-[INFO ] 25-09-27 22:36:30 [ProjectApplication:652] - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 25-09-27 22:36:37 [sqlonly:228] - SELECT @@character_set_database, @@sql_mode
-
-[WARN ] 25-09-27 22:36:39 [JpaBaseConfiguration$JpaWebConfiguration:258] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 25-09-27 22:36:40 [ProjectApplication:59] - Started ProjectApplication in 11.181 seconds (process running for 12.432)
-[INFO ] 25-09-27 22:43:00 [ProjectApplication:53] - Starting ProjectApplication using Java 21.0.4 with PID 4056 (D:\My_Programming\SunhacksFull\backend\build\classes\java\main started by SienMinj in D:\My_Programming\SunhacksFull\backend)
-[DEBUG] 25-09-27 22:43:00 [ProjectApplication:54] - Running with Spring Boot v3.5.6, Spring v6.2.11
-[INFO ] 25-09-27 22:43:00 [ProjectApplication:652] - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 25-09-27 22:43:07 [sqlonly:228] - SELECT @@character_set_database, @@sql_mode
-
-[WARN ] 25-09-27 22:43:09 [JpaBaseConfiguration$JpaWebConfiguration:258] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 25-09-27 22:43:10 [ProjectApplication:59] - Started ProjectApplication in 10.969 seconds (process running for 12.696)
-[INFO ] 25-09-27 22:46:24 [ProjectApplication:53] - Starting ProjectApplication using Java 21.0.4 with PID 21744 (D:\My_Programming\SunhacksFull\backend\build\classes\java\main started by SienMinj in D:\My_Programming\SunhacksFull\backend)
-[DEBUG] 25-09-27 22:46:24 [ProjectApplication:54] - Running with Spring Boot v3.5.6, Spring v6.2.11
-[INFO ] 25-09-27 22:46:24 [ProjectApplication:652] - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 25-09-27 22:46:31 [sqlonly:228] - SELECT @@character_set_database, @@sql_mode
-
-[WARN ] 25-09-27 22:46:32 [JpaBaseConfiguration$JpaWebConfiguration:258] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 25-09-27 22:46:33 [ProjectApplication:59] - Started ProjectApplication in 10.654 seconds (process running for 12.215)
-[INFO ] 25-09-27 22:57:38 [ProjectApplication:53] - Starting ProjectApplication using Java 21.0.4 with PID 25404 (D:\My_Programming\SunhacksFull\backend\build\classes\java\main started by SienMinj in D:\My_Programming\SunhacksFull\backend)
-[DEBUG] 25-09-27 22:57:39 [ProjectApplication:54] - Running with Spring Boot v3.5.6, Spring v6.2.11
-[INFO ] 25-09-27 22:57:39 [ProjectApplication:652] - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 25-09-27 22:57:46 [sqlonly:228] - SELECT @@character_set_database, @@sql_mode
-
-[WARN ] 25-09-27 22:57:47 [JpaBaseConfiguration$JpaWebConfiguration:258] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 25-09-27 22:57:49 [ProjectApplication:59] - Started ProjectApplication in 12.148 seconds (process running for 14.406)
+[DEBUG] 26-01-17 00:00:03 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:00:04 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:00:04 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:00:05 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:00:05 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:00:05 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:00:07 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:00:07 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:00:07 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:00:08 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:00:08 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:00:08 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:01:36 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:01:36 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:01:36 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:17:38 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:17:38 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:17:38 [selectList:135] - <==      Total: 2
+[WARN ] 26-01-17 00:17:52 [HikariPool:825] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m21s40ms508µs200ns).
+[DEBUG] 26-01-17 00:18:02 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:18:02 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:18:02 [selectList:135] - <==      Total: 2
+[INFO ] 26-01-17 00:18:22 [ProjectApplication:53] - Starting ProjectApplication using Java 21.0.7 with PID 23768 (D:\My_Programming\Streetlink\backend\build\classes\java\main started by SienMinj in D:\My_Programming\Streetlink\backend)
+[DEBUG] 26-01-17 00:18:22 [ProjectApplication:54] - Running with Spring Boot v3.5.6, Spring v6.2.11
+[INFO ] 26-01-17 00:18:22 [ProjectApplication:652] - No active profile set, falling back to 1 default profile: "default"
+[WARN ] 26-01-17 00:18:27 [JpaBaseConfiguration$JpaWebConfiguration:258] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 26-01-17 00:18:27 [ProjectApplication:59] - Started ProjectApplication in 6.917 seconds (process running for 7.508)
+[DEBUG] 26-01-17 00:18:31 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:18:31 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:18:31 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:18:42 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:18:42 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:18:42 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:24:32 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:24:32 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:24:32 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:24:39 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:24:39 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:24:39 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:26:04 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:26:04 [selectItem:135] - ==> Parameters: 11111(Integer)
+[DEBUG] 26-01-17 00:26:06 [selectItem:135] - <==      Total: 1
+[DEBUG] 26-01-17 00:26:19 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:26:19 [selectItem:135] - ==> Parameters: 11111(Integer)
+[DEBUG] 26-01-17 00:26:19 [selectItem:135] - <==      Total: 1
+[DEBUG] 26-01-17 00:26:37 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:26:37 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:26:37 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:27:47 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:27:47 [selectItem:135] - ==> Parameters: 85281(Integer)
+[DEBUG] 26-01-17 00:27:47 [selectItem:135] - <==      Total: 1
+[DEBUG] 26-01-17 00:28:15 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:28:15 [selectItem:135] - ==> Parameters: 85281(Integer)
+[DEBUG] 26-01-17 00:28:15 [selectItem:135] - <==      Total: 1
+[DEBUG] 26-01-17 00:28:16 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:28:16 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:28:16 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:28:27 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:28:27 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:28:27 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:28:40 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:28:40 [selectItem:135] - ==> Parameters: 11111(Integer)
+[DEBUG] 26-01-17 00:28:40 [selectItem:135] - <==      Total: 1
+[DEBUG] 26-01-17 00:28:44 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:28:44 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:28:44 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:28:50 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:28:50 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:28:50 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:28:52 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:28:52 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:28:52 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:28:57 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:28:57 [selectItem:135] - ==> Parameters: 11111(Integer)
+[DEBUG] 26-01-17 00:28:57 [selectItem:135] - <==      Total: 1
+[DEBUG] 26-01-17 00:33:32 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:33:32 [selectItem:135] - ==> Parameters: 11111(Integer)
+[DEBUG] 26-01-17 00:33:32 [selectItem:135] - <==      Total: 1
+[DEBUG] 26-01-17 00:33:37 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:33:37 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:33:37 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:33:40 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:33:40 [selectItem:135] - ==> Parameters: 11111(Integer)
+[DEBUG] 26-01-17 00:33:40 [selectItem:135] - <==      Total: 1
+[DEBUG] 26-01-17 00:33:47 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:33:47 [selectItem:135] - ==> Parameters: 85281(Integer)
+[DEBUG] 26-01-17 00:33:47 [selectItem:135] - <==      Total: 1
+[DEBUG] 26-01-17 00:33:55 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:33:55 [selectItem:135] - ==> Parameters: 85282(Integer)
+[DEBUG] 26-01-17 00:33:55 [selectItem:135] - <==      Total: 0
+[DEBUG] 26-01-17 00:34:56 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:34:56 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:34:56 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:38:56 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:38:56 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:38:56 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:39:00 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:39:00 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:39:00 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:39:15 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:39:15 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:39:15 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:39:19 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:39:19 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:39:19 [selectList:135] - <==      Total: 2
+[DEBUG] 26-01-17 00:39:23 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:39:23 [selectItem:135] - ==> Parameters: 0(Integer)
+[DEBUG] 26-01-17 00:39:23 [selectItem:135] - <==      Total: 0
+[DEBUG] 26-01-17 00:40:00 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:40:00 [selectItem:135] - ==> Parameters: 0(Integer)
+[DEBUG] 26-01-17 00:40:00 [selectItem:135] - <==      Total: 0
+[DEBUG] 26-01-17 00:40:22 [selectItem:135] - ==>  Preparing: SELECT * FROM area_ratings WHERE zipcode = ?
+[DEBUG] 26-01-17 00:40:22 [selectItem:135] - ==> Parameters: 11111(Integer)
+[DEBUG] 26-01-17 00:40:22 [selectItem:135] - <==      Total: 1
+[DEBUG] 26-01-17 00:40:26 [selectList:135] - ==>  Preparing: SELECT * FROM area_ratings
+[DEBUG] 26-01-17 00:40:26 [selectList:135] - ==> Parameters: 
+[DEBUG] 26-01-17 00:40:26 [selectList:135] - <==      Total: 2
