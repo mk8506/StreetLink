@@ -1,38 +1,45 @@
-export type AreaType = {
-  zipcode: number;
-  city: string;
-  description: string;
-  population: number;
-  safety: number;
-  publicEdu: number;
-  affordability: number;
-  traits: string[];
+import React, { useState } from 'react';
+import type { ApiResponse, Area } from './Types';
+
+
+const [cityName, setCityName] = useState<string>('');
+const [zipcode, setZipcode] = useState<string>('');
+const [areas, setAreas] = useState<Area[]>([]);
+const [loading, setLoading] = useState<boolean>(false);
+const [error, setError] = useState<string>('');
+
+export async function fetchAreas(): Promise<void> {
+  if (!cityName && !zipcode) {
+    setError('Please enter at least one search criteria');
+    return;
+  }
+
+  setLoading(true);
+  setError('');
+
+  try {
+    // Spring Boot RequestParam 형식으로 쿼리 파라미터 구성
+    const params = new URLSearchParams();
+    if (cityName) params.append('city', cityName);
+    if (zipcode) params.append('zipcode', zipcode);
+
+    const response = await fetch(`http://localhost:8080/areas/search?${params.toString()}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data: ApiResponse = await response.json();
+    setAreas(data.areas);
+  } catch (err) {
+    setError(err instanceof Error ? err.message : 'An error occurred');
+    setAreas([]);
+  } finally {
+    setLoading(false);
+  }
 };
-
-export type ApiDataAll = {
-  timestamp: String;
-  status: number;
-  message: String;
-  areas: AreaType[];
-};
-
-export type ApiData = {
-  timestamp: String;
-  status: number;
-  message: String;
-  areas: AreaType;
-};
-
-export async function getAll(input: string): Promise<ApiDataAll> {
-  let url="http://localhost:8080/areas";
-  const res = await fetch(`${url}`);
-  if (!res.ok) throw new Error("Request failed");
-  return res.json();
-}
-
-export async function getOne(input: string): Promise<ApiData> {
-  let url=`http://localhost:8080/areas/${input}`;
-  const res = await fetch(`${url}`);
-  if (!res.ok) throw new Error("Request failed");
-  return res.json();
-}

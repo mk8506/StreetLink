@@ -3,6 +3,8 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Display from './components/Display.tsx'
 import Search from './components/Search.tsx'
 import { useState } from "react";
+import type { Inputs } from './components/Types.tsx';
+import AreaListPage from './components/AreaListPage.tsx';
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -13,8 +15,9 @@ export default function App() {
         <Route path='/' element={<Navigate to={'/areas'} />} />
       </Routes> */}
       
-      <Search onSearch={setQuery} />
-      <Display value={query} />
+      {/* <Search onSearch={(inputs: Inputs) => {setQuery(inputs.city);} }  />
+      <Display value={query} /> */}
+      <AreaListPage></AreaListPage>
     </>
   );
 }

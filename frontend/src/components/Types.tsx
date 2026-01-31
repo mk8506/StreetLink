@@ -1,18 +1,17 @@
-export type AreaType = {
+export type Area = {
   zipcode: number;
   city: string;
-  description: string;
   population: number;
   safety: number;
   publicEdu: number;
   affordability: number;
   traits: string[];
-};
+  description: string;
+}
 
-export type ApiDataType = {
-  timestamp: String;
+export type ApiResponse = {
+  timestamp: string;
   status: number;
-  message: String;
-  area: AreaType[];
-};
-
+  message: string;
+  areas: Area[];
+}
