@@ -73,4 +73,19 @@ public class AreaServiceImpl implements AreaService {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'deletArea'");
   }
+
+  @Override
+  public List<Area> findByCityAndZipcode(String city, Integer zipcode) throws Exception {
+    return areaMapper.findByCityAndZipcode(city, zipcode);
+  }
+
+  @Override
+  public List<Area> findByCity(String city) throws Exception {
+    return areaMapper.findByCity(city);
+  }
+
+  @Override
+  public List<Area> findByZipcode(Integer zipcode) throws Exception {
+    return areaMapper.findByZipcode(zipcode);
+  }
 }

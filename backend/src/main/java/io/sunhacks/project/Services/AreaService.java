@@ -10,4 +10,7 @@ public interface AreaService {
   public Area addItem(Area input) throws Exception;
   public List<Area> editItem(Area input) throws Exception;
   public Area deleteArea(Area input) throws Exception;
+  public List<Area> findByCityAndZipcode(String city, Integer zipcode) throws Exception;
+  public List<Area> findByCity(String city) throws Exception;
+  public List<Area> findByZipcode(Integer zipcode) throws Exception;
 }

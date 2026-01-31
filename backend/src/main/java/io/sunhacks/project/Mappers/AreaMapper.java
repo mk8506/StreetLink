@@ -39,4 +39,46 @@ public interface AreaMapper {
                   typeHandler = StringArrayConverter.class)
   })
   public int updateItem(Area input);
+    
+  @Select("SELECT * FROM area_ratings WHERE city = #{city} AND zipcode = #{zipcode}")
+  @Results({
+        @Result(property = "zipcode", column = "zipcode"),
+        @Result(property = "city", column = "city"),
+        @Result(property = "population", column = "population"),
+        @Result(property = "safety", column = "safety"),
+        @Result(property = "publicEdu", column = "public_edu"),
+        @Result(property = "affordability", column = "affordability"),
+        @Result(property = "traits", column = "traits", 
+                typeHandler = StringArrayConverter.class),
+        @Result(property = "description", column = "description")
+  })
+  List<Area> findByCityAndZipcode(@Param("city") String city, @Param("zipcode") int zipcode);
+    
+  @Select("SELECT * FROM area_ratings WHERE city = #{city}")
+  @Results({
+        @Result(property = "zipcode", column = "zipcode"),
+        @Result(property = "city", column = "city"),
+        @Result(property = "population", column = "population"),
+        @Result(property = "safety", column = "safety"),
+        @Result(property = "publicEdu", column = "public_edu"),
+        @Result(property = "affordability", column = "affordability"),
+        @Result(property = "traits", column = "traits", 
+                typeHandler = StringArrayConverter.class),
+        @Result(property = "description", column = "description")
+  })
+  List<Area> findByCity(@Param("city") String city);
+    
+  @Select("SELECT * FROM area_ratings WHERE zipcode = #{zipcode}")
+  @Results({
+        @Result(property = "zipcode", column = "zipcode"),
+        @Result(property = "city", column = "city"),
+        @Result(property = "population", column = "population"),
+        @Result(property = "safety", column = "safety"),
+        @Result(property = "publicEdu", column = "public_edu"),
+        @Result(property = "affordability", column = "affordability"),
+        @Result(property = "traits", column = "traits", 
+                typeHandler = StringArrayConverter.class),
+        @Result(property = "description", column = "description")
+  })
+  List<Area> findByZipcode(@Param("zipcode") int zipcode);
 }
